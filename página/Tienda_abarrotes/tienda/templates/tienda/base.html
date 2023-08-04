@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Tienda de Abarrotes</title>
+    <!-- Aquí van los enlaces a las hojas de estilo, scripts y metadatos comunes -->
+</head>
+<body>
+    <header>
+        <h1>Mi Tienda de Abarrotes</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/lista_productos/">Productos</a></li>
+                <li><a href="/carrito_compras/">Carrito de Compras</a></li>
+                <li><a href="/procesar_pedido/">Procesar Pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    
+    <footer>
+        <!-- Pie de página con información común -->
+    </footer>
+</body>
+</html>

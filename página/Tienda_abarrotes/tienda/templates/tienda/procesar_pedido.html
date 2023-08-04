@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Procesar Pedido</h2>
+<form method="post">
+  {% csrf_token %}
+  <p>Revisa los productos en tu carrito y confirma el pedido:</p>
+  <ul>
+    {% for item in carrito %}
+    <li>{{ item.producto.nombre }} - Cantidad: {{ item.cantidad }}</li>
+    {% endfor %}
+  </ul>
+  <p>Total: ${{ total }}</p>
+  <input type="submit" value="Confirmar Pedido">
+</form>
+{% endblock %}
